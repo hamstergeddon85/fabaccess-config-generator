@@ -104,12 +104,14 @@ Die CSV-Datei `beispielwerkstatt.csv` und das Diagramm `beispielwerkstatt.svg` b
 
 
 # Nutzung des Python-Skripts
-- Eingelesen wird die Datei `maschinenliste.csv`
+- Eingelesen wird die Datei `maschinenliste.csv` [^1]
   - Die Spaltennamen dienen der Zuordnung und dürfen nicht umbenannt werden.
   - Die Reihenfolge der Spalten kann nach Belieben verändert werden.
 - Zentrale Einstellungen können in der `settings.ini` vorgenommen werden,
 - Aktor-Typen können in der `actors.ini` definiert
 - Erzeugte Daten werden im Unterordner `output` gespeichert.
+
+[^1]: Die Datei muss in der Enkodierung UTF-8 (ohne BOM) vorliegen.
 
 ## Anlegen von Maschinen (maschinenliste.csv)
 - Verwendetes Trennzeichen: `;`
@@ -151,16 +153,16 @@ Hinweis zum Feld `Unterbereich Manager`:
 | **manager_subarea**        | Spalte "Unterbereich Manager" der CSV beachten (True) oder nicht (False).                                      |
 | **fa_update_dhall**        | Automatische Aktualisierung einer bestehenden `bffh.dhall`.                                                    |
 | **fa_dhall_file**          | Pfad zur bffh.dall.                                                                                            |
-| **generate_mermaid**       | Mermaid-Code erzeugen, der Bereiche und Rolle in einem Diagramm abbildet. [^1]                                 |
+| **generate_mermaid**       | Mermaid-Code erzeugen, der Bereiche und Rolle in einem Diagramm abbildet. [^2]                                 |
 | **create_file_roles**      | Erstellung einer gesonderten CSV-Datei, die jede Rollen-ID und den dazugehörigen Rollen-Name beinhaltet.       |
 | **show_machines**          | Alle importierten Maschinen-Daten anzeigen.                                                                    |
 | **show_roles**             | Alle erzeugten Rollen-Daten anzeigen.                                                                          |
-| **string_adminhandle**     | Kennzeichnung von Administrator-Rollen im Anzeigename. Der String wird dem Namen der Rolle vorangestellt. [^2] |
-| **string_managerhandle**   | Kennzeichnung für Manager-Rollen, steht am Anfang des Namens der Rolle. [^2]                                   |
-| **string_userhandle**      | Kennzeichnung von Benutzer-Rollen im Anzeigename. Der String wird dem Namen der Rolle vorangestellt. [^2]      |
+| **string_adminhandle**     | Kennzeichnung von Administrator-Rollen im Anzeigename. Der String wird dem Namen der Rolle vorangestellt. [^3] |
+| **string_managerhandle**   | Kennzeichnung für Manager-Rollen, steht am Anfang des Namens der Rolle. [^3]                                   |
+| **string_userhandle**      | Kennzeichnung von Benutzer-Rollen im Anzeigename. Der String wird dem Namen der Rolle vorangestellt. [^3]      |
 
-[^1]: Ausgabe erfolgt in die Datei `mermaid-code.txt`. Der enthaltene Code kann auf [mermaid.live](https://mermaid.live/) eingefügt werden, um das Diagramm als Grafik zu speichern.
-[^2]: Der Anzeigename wird aktuell nur im Diagramm verwendet.
+[^2]: Ausgabe erfolgt in die Datei `mermaid-code.txt`. Der enthaltene Code kann auf [mermaid.live](https://mermaid.live/) eingefügt werden, um das Diagramm als Grafik zu speichern.
+[^3]: Der Anzeigename wird aktuell nur im Diagramm verwendet.
 
 
 ## Aktorenbibliothek (actors.ini)
